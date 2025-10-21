@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 15:41:10 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/21 23:05:30 by fgoncal2         ###   ########.fr       */
+/*   Created: 2025/10/21 12:18:37 by fgoncal2          #+#    #+#             */
+/*   Updated: 2025/10/21 23:05:15 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-#include <stdio.h>
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	size_t	i;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int	c);
-int		ft_isascii(int c);
-int		ft_isprintable(int c);
-int		ft_strlen(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memmove(void *dst, const void *src, size_t len);
-
-#endif
+	i = 0;
+	if (dst > src)
+	{
+		while (len > 0)
+		{
+			((char *)dst)[len] = ((char *)src)[len];
+			len--;
+		}
+	}
+	else
+	{
+		while (i < len)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+		}
+	}
+	return (dst);
+}

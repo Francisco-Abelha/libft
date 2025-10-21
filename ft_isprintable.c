@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprintable.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 15:17:08 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/10/20 16:13:59 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/21 02:04:47 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprintable(int c)
 {
-	if (c <= 32 && c >= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

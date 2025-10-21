@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/20 21:01:44 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/21 23:21:45 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,24 @@ int	main(void)
 	ft_bzero(str2 + 12, 4*sizeof(char));
 
 	printf("After ft_bzero(): %s\n", str2);
+
+	printf("-----------------memcpy-----------------\n");
+
+	char str3[] = "Geeks";
+    char str4[6] = "";
+
+    ft_memcpy(str4, str3, sizeof(str3));
+
+    printf("str2 after memcpy:");
+    printf("%s\n",str4);
+
+	printf("-----------------memmove-----------------\n");
+
+	char str5[] = "ABCDE";
+	
+	ft_memmove(str5 + 1, str5, 4);
+	
+	printf("%s\n", str5);
 
 	return (0);
 }
