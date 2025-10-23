@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/23 15:37:23 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/23 15:56:08 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -154,7 +154,7 @@ int	main(void)
 	char	str10[20] = "abcdefg";
 	char	str11[20] = "abcdeff";
 
-	printf("%d\n", ft_strncmp(str10, str11, 5));
+	printf("%d\n", ft_strncmp(str10, str11, 4));
 
 
 	printf("-----------------memchr-----------------\n");
@@ -170,6 +170,12 @@ int	main(void)
 
 	printf("%d\n", ft_memcmp(str13, str14, 6));
 
+	printf("-----------------strnstr-----------------\n");
+
+	char	haystack3[50] = "tralalalalacacapapapa";
+	char	needle3[20] = "capa";
+	
+	printf("%s\n", ft_strnstr(haystack3, needle3, 17));
 
 	return (0);
 }
