@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:41:10 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/23 15:53:56 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/23 22:08:14 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

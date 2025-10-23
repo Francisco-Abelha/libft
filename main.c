@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/23 15:56:08 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/24 00:29:01 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 int	main(void)
 {
@@ -154,11 +152,11 @@ int	main(void)
 	char	str10[20] = "abcdefg";
 	char	str11[20] = "abcdeff";
 
-	printf("%d\n", ft_strncmp(str10, str11, 4));
+	printf("%d\n", ft_strncmp(str10, str11, 7));
 
 
 	printf("-----------------memchr-----------------\n");
-	
+
 	char	str12[20] = "ahgdhada7";
 
 	printf("%s\n", (char *)ft_memchr(str12, '7', 10));
@@ -174,8 +172,7 @@ int	main(void)
 
 	char	haystack3[50] = "tralalalalacacapapapa";
 	char	needle3[20] = "capa";
-	
-	printf("%s\n", ft_strnstr(haystack3, needle3, 17));
 
+	printf("%s\n", ft_strnstr(haystack3, needle3, 17));
 	return (0);
 }

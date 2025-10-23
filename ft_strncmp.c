@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:39:09 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/10/23 00:40:47 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/24 00:33:12 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while (*s1 && *s1 == *s2 && n > 0)
+	if (n <= 0)
+		return (0);
+	while (*s1 && (*s1 == *s2) && --n > 0)
 	{
 		s1++;
 		s2++;
-		n--;
 	}
-
 	return (*s1 - *s2);
 }
 
