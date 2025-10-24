@@ -20,6 +20,7 @@ SRCS = ft_isalpha.c\
 		ft_memcmp.c\
 		ft_strnstr.c\
 		ft_atoi.c\
+		ft_calloc.c\
 		main.c
 OBJ = $(SRCS:.c=.o)
 CC = cc

@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/24 01:01:23 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/24 14:53:58 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,6 +184,23 @@ int	main(void)
 
 	printf("-----------------calloc-----------------\n");
 
+	size_t		numInts = 15;
+	size_t		*arrayInts = ft_calloc(numInts, sizeof(size_t));
+
+	printf("{");
+	for(size_t i = 0; i < numInts; i++) {
+  		printf("%ld, ", arrayInts[i]);
+	}
+
+	printf("}\n");
+
+	free(arrayInts);
+	arrayInts = NULL;
+
+	printf("-----------------strdup-----------------\n");
+
+	char	*str16[20] = "oldstring";
+	char	*str17[20] = strdup()
 
 	return (0);
 }
