@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/24 20:41:15 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/25 00:12:51 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,6 +215,25 @@ int	main(void)
 	char	*substr = ft_substr(str18, 4, 4);
 
 	printf("%s\n", substr);
+
+	printf("------------------strjoin-----------------\n");
+
+	char	str19[20] = "abcdefgh";
+	char	str20[30] = "1234567891234567sdfsdgf";
+	char	*joined = ft_strjoin(str19, str20);
+	printf("%s\n", joined);
+
+	free(joined);
+
+	printf("------------------strtrim-----------------\n");
+
+	char	str21[30] = "Hello world";
+	char	str22[30] = "ol";
+	char	*trimmed = ft_strtrim(str21, str22);
+
+	printf("Trimmed : %s\n", trimmed);
+
+	free(trimmed);
 
 	return (0);
 }
