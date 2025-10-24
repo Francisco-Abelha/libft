@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/24 14:53:58 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/24 20:41:15 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,8 +199,22 @@ int	main(void)
 
 	printf("-----------------strdup-----------------\n");
 
-	char	*str16[20] = "oldstring";
-	char	*str17[20] = strdup()
+	char	str16[20] = "oldstring";
+	char	*str17 = ft_strdup(str16);
+
+	printf("%s\n", str17);
+
+	free(str17);
+
+	printf("-----------------------------------------\n");
+	printf("-----------------------------------------\n");
+
+	printf("------------------substr-----------------\n");
+
+	char	str18[20] = "123456789";
+	char	*substr = ft_substr(str18, 4, 4);
+
+	printf("%s\n", substr);
 
 	return (0);
 }
