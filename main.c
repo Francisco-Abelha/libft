@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/24 00:57:40 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/24 01:01:23 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -181,6 +181,9 @@ int	main(void)
 	int		atoiRet = ft_atoi(str15);
 
 	printf("%d\n", atoiRet);
+
+	printf("-----------------calloc-----------------\n");
+
 
 	return (0);
 }
