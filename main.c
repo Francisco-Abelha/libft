@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/25 00:12:51 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/26 00:33:56 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -227,13 +227,31 @@ int	main(void)
 
 	printf("------------------strtrim-----------------\n");
 
-	char	str21[30] = "Hello world";
-	char	str22[30] = "ol";
+	char	str21[30] = "abl23842llbbaa";
+	char	str22[30] = "lab2";
 	char	*trimmed = ft_strtrim(str21, str22);
 
 	printf("Trimmed : %s\n", trimmed);
 
 	free(trimmed);
+
+	printf("------------------split-----------------\n");
+
+	char	str23[80] = ",,,,asdggf,sdfasdg,4gg4,,,,";
+	char	delim = ',';
+	char	**arraySplit = ft_split(str23, delim);
+	char	**ptr = arraySplit;
+
+	while (*ptr != NULL)
+	{
+		printf("%s\n", *ptr);
+		ptr++;
+	}
+
+	for (size_t i = 0; ptr[i] != NULL; i++) {
+    	free(ptr[i]);
+	}
+	free(arraySplit);
 
 	return (0);
 }
