@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 14:36:04 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/10/24 20:29:20 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/28 14:47:04 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 	size_t	i;
 
+	i = 0;
 	len = ft_strlen(s);
 	ret = malloc(len * sizeof(char) + 1);
 	if (!ret)

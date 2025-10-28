@@ -3,71 +3,76 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 19:05:55 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/10/26 21:56:31 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:12:43 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	num_len(int n)
+static size_t	num_len(unsigned int n)
 {
 	size_t	count;
 
 	count = 0;
-	if (n < 0)
-		n *= -1;
-	while (n > 0)
-	{
-		count++;
-		n = n / 10;
-	}
-	return (count);
-}
-/*
-static void ft_rev(char* s) {
-
-    int l = 0;
-    int r = strlen(s) - 1;
-    char t;
-
-    while (l < r) {
-
-        t = s[l];
-        s[l] = s[r];
-        s[r] = t;
-
-        l++;
-        r--;
+	if (n == 0)
+        return (1);
+    while (n > 0)
+    {
+        count++;
+        n /= 10;
     }
+    return (count);
 }
-*/
-char	*ft_itoa(int n)
+
+static char	*fill_number(char *ret, unsigned int nbr, size_t len, size_t is_negative)
+{
+	ret[len] = '\0';
+	while (len-- > is_negative)
+	{
+		ret[len] = (nbr % 10) + '0';
+		nbr = nbr / 10;
+	}
+	if (is_negative)
+		ret[0] = '-';
+	return (ret);
+}
+
+static char	*handle_int_min(void)
 {
 	char	*ret;
-	size_t	len;
-	size_t	i;
 
-	len = num_len(n);
+	ret = malloc(12);
+	if (!ret)
+		return (NULL);
+	ft_strlcpy(ret, "-2147483648", 12);
+	return (ret);
+}
+
+char	*ft_itoa(int n)
+{
+	size_t			len;
+	size_t			is_negative;
+	char			*ret;
+	unsigned int	nbr;
+
+	is_negative = 0;
+	if (n == -2147483648)
+		return (handle_int_min());
 	if (n < 0)
 	{
-		n *= -1;
-		i = 1;
-		ret = malloc(len + 2);
-		ret[0] = '-';
-		//printf("%c", ret[0]);
-		while (i < len + 1)
-		{
-			ret[i] = (n % 10) + '0';
-			//printf("%d", ret[i]);
-			i++;
-			n = n / 10;
-		}
-		ret[i] = '\0';
-		//ft_rev(ret);
-		//printf("string: %s\n", ret);
+		is_negative = 1;
+		nbr = (unsigned int)(-n);
 	}
-	return (ret);
+	else
+		nbr = (unsigned int)n;
+	len = num_len(nbr);
+	if (is_negative)
+		len++;
+	ret = malloc(len + 1);
+	if (!ret)
+		return (NULL);
+	return (fill_number(ret, nbr, len, is_negative));
 }

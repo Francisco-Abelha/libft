@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/26 21:33:45 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:17:54 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -255,17 +255,12 @@ int	main(void)
 
 	printf("------------------itoa-----------------\n");
 
-	int		num_itoa = -12836;
-	char	*char_itoa = ft_itoa(num_itoa);
-	int i = 0;
+	char *s;
 
-	while (i < ft_strlen(char_itoa))
-	{
-		printf("%c", char_itoa[i]);
-		i++;
-	}
-	printf("\nfinal: %s\n", char_itoa);
-
-
+    s = ft_itoa(0);      printf("%s\n", s); free(s);
+    s = ft_itoa(42);     printf("%s\n", s); free(s);
+    s = ft_itoa(-42);    printf("%s\n", s); free(s);
+    s = ft_itoa(123456); printf("%s\n", s); free(s);
+    s = ft_itoa(INT_MIN);printf("%s\n", s); free(s);
 	return (0);
 }
