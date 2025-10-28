@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/28 15:17:54 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:58:28 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -262,5 +262,13 @@ int	main(void)
     s = ft_itoa(-42);    printf("%s\n", s); free(s);
     s = ft_itoa(123456); printf("%s\n", s); free(s);
     s = ft_itoa(INT_MIN);printf("%s\n", s); free(s);
+
+	printf("------------------striteri-----------------\n");
+	
+	char	str24[] = "abcdefgh";
+	
+	ft_striteri(str24, add_index);
+	printf("%s\n", str24);
+
 	return (0);
 }

@@ -27,22 +27,31 @@ SRCS = ft_isalpha.c\
 		ft_strtrim.c\
 		ft_split.c\
 		ft_itoa.c\
-		main.c
+		ft_striteri.c
+
 OBJ = $(SRCS:.c=.o)
+
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -Iincludes
 
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+test: $(NAME)
+	$(CC) $(CFLAGS) main.c -L. -lft -o test_libft
+	./test_libft
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) test_libft
 
 re:	fclean all
 
-.PHONY: clean fclean all
+.PHONY: clean fclean all re test
