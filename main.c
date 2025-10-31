@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/10/29 20:53:00 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/10/30 22:09:54 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -299,6 +299,77 @@ int	main(void)
 
 	ft_putnbr_fd(-2147483648, fd);
 	ft_putchar_fd('\n', fd);
+
+	printf("--------------------------------------------\n");
+	printf("|                 BONUS                    |\n");
+	printf("--------------------------------------------\n");
+
+	printf("------------------lstnew--------------------\n");
+
+	t_list	*list = ft_lstnew("ajh");
+	printf("%s\n", (char *)list->content);
+
+	printf("----------------lstadd_front----------------\n");
+
+	t_list	*list2 = ft_lstnew("777");
+	t_list *new_node1 = ft_lstnew("new1");
+	t_list	*new_node2 = ft_lstnew("new2");
+	ft_lstadd_front(&list2, new_node1);
+	ft_lstadd_front(&list2, new_node2);
+
+	t_list	*list3 = list2;
+	t_list	*list4 = list2;
+	t_list	*list5 = list2;
+	while (list2 != NULL)
+	{
+		printf("%s", (char *)list2->content);
+		if (list2->next != NULL)
+            printf(" -> ");
+		list2 = list2->next;
+	}
+	printf("\n");
+
+	printf("----------------lstsize----------------\n");
+
+	printf("%d\n", ft_lstsize(list3));
+
+	printf("----------------lstlast----------------\n");
+
+	t_list	*last_node = ft_lstlast(list4);
+	printf("%s\n", (char *)last_node->content);
 	
+	printf("----------------lstadd_back----------------\n");
+	
+	t_list	*new_node3 = ft_lstnew("888");
+	ft_lstadd_back(&list5, new_node3);
+
+	while (list5 != NULL)
+	{
+		printf("%s", (char *)list5->content);
+		if (list5->next != NULL)
+            printf(" -> ");
+		list5 = list5->next;
+	}
+	printf("\n");
+
+	printf("----------------lstdelone----------------\n");
+
+	t_list	*list6 = ft_lstnew("dih");
+	t_list	*new_node4 = ft_lstnew("ahh");
+	t_list	*new_node5 = ft_lstnew("big");
+	
+	ft_lstadd_front(&list6, new_node4);
+	ft_lstadd_front(&list6, new_node5);
+
+	
+	ft_lstdelone(&list6[0], del);
+	while (list6 != NULL)
+	{
+		printf("%s", (char *)list6->content);
+		if (list6->next != NULL)
+            printf(" -> ");
+		list6 = list6->next;
+	}
+
 	return (0);
 }
