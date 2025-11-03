@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/11/03 02:33:02 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/11/03 17:31:44 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 int	main(void)
 {
-	printf("---------------isalpha---------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                ISALPHA                   |\n");
+	printf("--------------------------------------------\n");
 	int		c1;
 	int		num1;
 
@@ -22,7 +25,10 @@ int	main(void)
 	num1 = ft_isalpha(c1);
 	printf("%d\n", num1);
 
-	printf("---------------isdigit---------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                ISDIGIT                   |\n");
+	printf("--------------------------------------------\n");
 	int		c2;
 	int		num2;
 
@@ -30,7 +36,10 @@ int	main(void)
 	num2 = ft_isdigit(c2);
 	printf("%d\n", num2);
 
-	printf("---------------isalnum---------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                ISALNUM                   |\n");
+	printf("--------------------------------------------\n");
 	int		c3;
 	int		num3;
 
@@ -38,7 +47,10 @@ int	main(void)
 	num3 = ft_isalnum(c3);
 	printf("%d\n", num3);
 
-	printf("---------------isascii---------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                ISASCII                   |\n");
+	printf("--------------------------------------------\n");
 	int		c4;
 	int		num4;
 
@@ -46,7 +58,10 @@ int	main(void)
 	num4 = ft_isascii(c4);
 	printf("%d\n", num4);
 
-	printf("--------------isprintable--------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|              ISPRINTABLE                 |\n");
+	printf("--------------------------------------------\n");
 
 	int		c5;
 	int		num5;
@@ -55,7 +70,10 @@ int	main(void)
 	num5 = ft_isprintable(c5);
 	printf("%d\n", num5);
 
-	printf("----------------strlen----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRLEN                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	*str1;
 	int		len1;
@@ -64,7 +82,10 @@ int	main(void)
 	len1 = ft_strlen(str1);
 	printf("%d\n", len1);
 
-	printf("----------------memset----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                MEMSET                    |\n");
+	printf("--------------------------------------------\n");
 
 	char str[50] = "GeeksForGeeks is for programming geeks.";
 	printf("\nBefore memset(): %s\n", str);
@@ -74,7 +95,10 @@ int	main(void)
 
 	printf("After memset():  %s\n", str);
 
-	printf("-----------------bzero-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                 BZERO                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	str2[60] = "Bla bla bla mega bla bla bla type shi";
 	printf("\nBefore ft_bzero(): %s\n", str2);
@@ -83,7 +107,10 @@ int	main(void)
 
 	printf("After ft_bzero(): %s\n", str2);
 
-	printf("-----------------memcpy-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                MEMCPY                    |\n");
+	printf("--------------------------------------------\n");
 
 	char str3[] = "Geeks";
     char str4[6] = "";
@@ -93,7 +120,10 @@ int	main(void)
     printf("str2 after memcpy:");
     printf("%s\n",str4);
 
-	printf("-----------------memmove-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                MEMMOVE                   |\n");
+	printf("--------------------------------------------\n");
 
 	char str5[20] = "ABCDEFGH";
 
@@ -101,7 +131,10 @@ int	main(void)
 
 	printf("%s\n", str5);
 
-	printf("-----------------strlcpy-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRLCPY                   |\n");
+	printf("--------------------------------------------\n");
 
 	char	str6[20] = "asjdj4sh";
 	char	str7[6] = "";
@@ -111,7 +144,10 @@ int	main(void)
 	printf("%s\n", str7);
 	printf("%d\n", len2);
 
-	printf("-----------------strlcat-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRLCAT                   |\n");
+	printf("--------------------------------------------\n");
 
 	char	str8[40] = "dasdfas";
 	char	str9[10] = "66345";
@@ -121,33 +157,48 @@ int	main(void)
 	printf("%s\n", str9);
 	printf("%d\n", len3);
 
-	printf("-----------------toupper-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                TOUPPER                   |\n");
+	printf("--------------------------------------------\n");
 
 	int	low = 'x';
 
 	printf("%c\n", ft_toupper(low));
 
-	printf("-----------------tolower-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                TOLOWER                   |\n");
+	printf("--------------------------------------------\n");
 
 	int	up = 'D';
 
 	printf("%c\n", ft_tolower(up));
 
-	printf("-----------------strchr-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRCHR                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	haystack[40] = "haystack";
 	int		needle = 'a';
 
 	printf("%s\n", ft_strchr(haystack, needle));
 
-	printf("-----------------strrchr-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRRCHR                   |\n");
+	printf("--------------------------------------------\n");
 
 	char	haystack2[40] = "haystack2";
 	int		needle2 = 'a';
 
 	printf("%s\n", ft_strrchr(haystack2, needle2));
 
-	printf("-----------------strncmp-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRNCMP                   |\n");
+	printf("--------------------------------------------\n");
 
 	char	str10[20] = "abcdefg";
 	char	str11[20] = "abcdeff";
@@ -155,34 +206,49 @@ int	main(void)
 	printf("%d\n", ft_strncmp(str10, str11, 7));
 
 
-	printf("-----------------memchr-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                MEMCHR                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	str12[20] = "ahgdhada7";
 
 	printf("%s\n", (char *)ft_memchr(str12, '7', 10));
 
-	printf("-----------------memcmp-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                MEMCMP                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	str13[20] = "1234567";
 	char	str14[20] = "1234577";
 
 	printf("%d\n", ft_memcmp(str13, str14, 6));
 
-	printf("-----------------strnstr-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRNSTR                   |\n");
+	printf("--------------------------------------------\n");
 
 	char	haystack3[50] = "tralalalalacacapapapa";
 	char	needle3[20] = "capa";
 
 	printf("%s\n", ft_strnstr(haystack3, needle3, 17));
 
-	printf("-----------------atoi-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                  ATOI                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	str15[20] = "-3462sdf9898g";
 	int		atoiRet = ft_atoi(str15);
 
 	printf("%d\n", atoiRet);
 
-	printf("-----------------calloc-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                CALLOC                    |\n");
+	printf("--------------------------------------------\n");
 
 	size_t		numInts = 15;
 	size_t		*arrayInts = ft_calloc(numInts, sizeof(size_t));
@@ -197,7 +263,10 @@ int	main(void)
 	free(arrayInts);
 	arrayInts = NULL;
 
-	printf("-----------------strdup-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRDUP                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	str16[20] = "oldstring";
 	char	*str17 = ft_strdup(str16);
@@ -206,17 +275,20 @@ int	main(void)
 
 	free(str17);
 
-	printf("-----------------------------------------\n");
-	printf("-----------------------------------------\n");
-
-	printf("------------------substr-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                SUBSTR                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	str18[20] = "123456789";
 	char	*substr = ft_substr(str18, 4, 4);
 
 	printf("%s\n", substr);
 
-	printf("------------------strjoin-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRJOIN                   |\n");
+	printf("--------------------------------------------\n");
 
 	char	str19[20] = "abcdefgh";
 	char	str20[30] = "1234567891234567sdfsdgf";
@@ -225,7 +297,10 @@ int	main(void)
 
 	free(joined);
 
-	printf("------------------strtrim-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRTRIM                   |\n");
+	printf("--------------------------------------------\n");
 
 	char	str21[30] = "abl23842llbbaa";
 	char	str22[30] = "lab2";
@@ -235,7 +310,10 @@ int	main(void)
 
 	free(trimmed);
 
-	printf("------------------split-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                 SPLIT                    |\n");
+	printf("--------------------------------------------\n");
 
 	char	str23[80] = ",,,,asdggf,sdfasdg,4gg4,,,,";
 	char	delim = ',';
@@ -253,7 +331,10 @@ int	main(void)
 	}
 	free(arraySplit);
 
-	printf("------------------itoa-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                  ITOA                    |\n");
+	printf("--------------------------------------------\n");
 
 	char *s;
 
@@ -263,14 +344,20 @@ int	main(void)
     s = ft_itoa(123456); printf("%s\n", s); free(s);
     s = ft_itoa(INT_MIN);printf("%s\n", s); free(s);
 
-	printf("------------------striteri-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|               STRITERI                   |\n");
+	printf("--------------------------------------------\n");
 	
 	char	str24[] = "abcdefgh";
 	
 	ft_striteri(str24, add_index);
 	printf("%s\n", str24);
 
-	printf("------------------strmapi-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                STRMAPI                   |\n");
+	printf("--------------------------------------------\n");
 
 	char	str25[] = "abcdefgh";
 
@@ -278,7 +365,10 @@ int	main(void)
 
 	printf("%s\n", mapped);
 
-	printf("------------------putchar_fd-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|               PUTCHAR_FD                 |\n");
+	printf("--------------------------------------------\n");
 
 	int fd = open("file.txt", O_RDWR);
 	if (fd == -1)
@@ -286,30 +376,50 @@ int	main(void)
 	ft_putchar_fd('p', fd);
 	ft_putchar_fd('\n', fd);
 
-	printf("------------------putstr_fd-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                PUTSTR_FD                 |\n");
+	printf("--------------------------------------------\n");
 
 	ft_putstr_fd("abcdef", fd);
 	ft_putchar_fd('\n', fd);
 
-	printf("------------------putstr_fd-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|               PUTENDL_FD                 |\n");
+	printf("--------------------------------------------\n");
 
 	ft_putendl_fd("123456789", fd);
 
-	printf("------------------putnbr_fd-----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                PUTNBR_FD                 |\n");
+	printf("--------------------------------------------\n");
 
 	ft_putnbr_fd(-2147483648, fd);
 	ft_putchar_fd('\n', fd);
 
 	printf("--------------------------------------------\n");
 	printf("|                 BONUS                    |\n");
+	printf("|                 BONUS                    |\n");
+	printf("|                 BONUS                    |\n");
+	printf("|                 BONUS                    |\n");
+	printf("|                 BONUS                    |\n");
+	printf("|                 BONUS                    |\n");
 	printf("--------------------------------------------\n");
 
-	printf("------------------lstnew--------------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                  LSTNEW                  |\n");
+	printf("--------------------------------------------\n");
 
 	t_list	*list = ft_lstnew("ajh");
 	printf("%s\n", (char *)list->content);
 
-	printf("----------------lstadd_front----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|              LSTADD_FRONT                |\n");
+	printf("--------------------------------------------\n");
 
 	t_list	*list2 = ft_lstnew("777");
 	t_list *new_node1 = ft_lstnew("new1");
@@ -329,16 +439,25 @@ int	main(void)
 	}
 	printf("\n");
 
-	printf("----------------lstsize----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                 LSTSIZE                  |\n");
+	printf("--------------------------------------------\n");
 
 	printf("%d\n", ft_lstsize(list3));
 
-	printf("----------------lstlast----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|                 LSTLAST                  |\n");
+	printf("--------------------------------------------\n");
 
 	t_list	*last_node = ft_lstlast(list4);
 	printf("%s\n", (char *)last_node->content);
 	
-	printf("----------------lstadd_back----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|               LSTADD_BACK                |\n");
+	printf("--------------------------------------------\n");
 	
 	t_list	*new_node3 = ft_lstnew("888");
 	ft_lstadd_back(&list5, new_node3);
@@ -352,7 +471,10 @@ int	main(void)
 	}
 	printf("\n");
 
-	printf("----------------lstdelone----------------\n");
+	printf("\n");
+	printf("--------------------------------------------\n");
+	printf("|               LSTDELONE                  |\n");
+	printf("--------------------------------------------\n");
 
 	char *malstr = malloc(10);
 	ft_strlcpy(malstr, "test1", 10);
@@ -366,8 +488,8 @@ int	main(void)
 
 	if (list6 != NULL) {
     	t_list *to_delete = list6;
-    	list6 = list6->next;           // Move head forward
-    	ft_lstdelone(to_delete, del);  // Free old head
+    	list6 = list6->next;
+    	ft_lstdelone(to_delete, del);
 	}
 	while (list6 != NULL)
 	{
