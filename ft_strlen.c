@@ -6,13 +6,15 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:15:24 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/10/20 19:53:15 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/11/04 00:45:27 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (*s != '\0')

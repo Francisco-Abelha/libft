@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 00:09:55 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/10/30 19:44:46 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:42:11 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new || !lst)
 		return ;
-	if (!*lst)
-		new = *lst;
 	new->next = *lst;
 	*lst = new;
 }

@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 20:31:55 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/10/24 20:38:57 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/11/04 00:47:14 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 	size_t	i;
 
+	if (!*s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
 	i = 0;
 	substr = malloc(len * sizeof(char) + 1);
 	if (!substr)

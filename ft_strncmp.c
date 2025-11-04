@@ -6,7 +6,7 @@
 /*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 00:39:09 by fgoncal2          #+#    #+#             */
-/*   Updated: 2025/10/24 00:33:12 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/11/04 01:14:13 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		s1++;
 		s2++;
 	}
-	return (*s1 - *s2);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }
 
