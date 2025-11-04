@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgoncal2 <fgoncal2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgoncal2 <fgoncal2@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:44:41 by frgoncal          #+#    #+#             */
-/*   Updated: 2025/11/04 00:32:59 by fgoncal2         ###   ########.fr       */
+/*   Updated: 2025/11/04 16:20:35 by fgoncal2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,10 +220,13 @@ int	main(void)
 	printf("|                STRNSTR                   |\n");
 	printf("--------------------------------------------\n");
 
-	char	haystack3[50] = "tralalalalacacapapapa";
-	char	needle3[20] = "capa";
+    char *s11 = "MZIRIBMZIRIBMZE123";
+    char *s22 = "MZIRIBMZE";
+	size_t max = strlen(s22);
+    char *i1 = strnstr(s11, s22, max);
+    char *i2 = ft_strnstr(s11, s22, max);
 
-	printf("%s\n", ft_strnstr(haystack3, needle3, 17));
+	printf("%s %s\n", i1, i2);
 
 	printf("\n");
 	printf("--------------------------------------------\n");
